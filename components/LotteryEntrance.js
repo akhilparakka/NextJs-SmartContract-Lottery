@@ -29,7 +29,7 @@ export default function LotteryEntrance() {
 
     const { runContractFunction: getEntranceFee } = useWeb3Contract({
         abi: abi,
-        contractAddress: raffleAddress, // specify the networkId
+        contractAddress: raffleAddress,
         functionName: "getEntranceFee",
         params: {},
     })
@@ -99,6 +99,7 @@ export default function LotteryEntrance() {
                             <div>Enter Raffle</div>
                         )}
                     </button>
+                    <div></div>
                     <div>Entrance Fee : {ethers.utils.formatUnits(entranceFee, "ether")} ETH</div>
                     <div>Number Of Players : {numOfPlayers}</div>
                     <div>Latest Winner : {recentWinner}</div>
